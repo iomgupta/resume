@@ -3,77 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Gupta's Creative Space</title>
+    <title>Om Gupta's Resume</title>
     <style>
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #ff6f61, #6a82fb);
-            color: white;
+            background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+            color: #fff;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            overflow: hidden;
             text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 3.5em;
+            font-size: 3em;
             margin: 0;
-            animation: fadeIn 2s ease-in-out;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            animation: fadeIn 1s ease-in-out 0.5s forwards;
         }
 
         p {
-            font-size: 1.5em;
-            margin: 10px 0;
-            animation: fadeIn 2s ease-in-out 0.5s forwards;
-        }
-
-        .quote {
             font-size: 1.2em;
-            font-style: italic;
+            margin: 10px 0;
+            animation: fadeIn 1s ease-in-out 1s forwards;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
             margin: 20px 0;
-            animation: fadeIn 2s ease-in-out 1s forwards;
+            width: 80%;
+            max-width: 600px;
+            animation: fadeIn 1s ease-in-out forwards;
         }
 
-        .shapes {
-            position: relative;
-            width: 150px;
-            height: 150px;
-            animation: rotate 5s linear infinite;
+        .skills, .experience, .education {
+            list-style-type: none;
+            padding: 0;
         }
 
-        .circle {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background-color: #ffcc00;
-            border-radius: 50%;
-            animation: bounce 2s infinite;
+        .skills li, .experience li, .education li {
+            margin: 5px 0;
+            font-size: 1.1em;
         }
 
-        .square {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background-color: #00bcd4;
-            top: 50px;
-            left: 50px;
-            animation: slide 3s infinite alternate;
-        }
-
-        .triangle {
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 100px solid #ff5722;
-            top: 100px;
-            left: 25px;
-            animation: rotateTriangle 4s linear infinite;
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
         }
 
         @keyframes fadeIn {
@@ -84,55 +74,43 @@
                 opacity: 1;
             }
         }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-30px);
-            }
-            60% {
-                transform: translateY(-15px);
-            }
-        }
-
-        @keyframes slide {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(50px);
-            }
-        }
-
-        @keyframes rotateTriangle {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
     </style>
 </head>
 <body>
-    <h1>Welcome to Om Gupta's Creative Space</h1>
-    <p>Explore the world of creativity and design!</p>
-    <div class="quote">"Creativity is intelligence having fun." - Albert Einstein</div>
-    <div class="shapes">
-        <div class="circle"></div>
-        <div class="square"></div>
-        <div class="triangle"></div>
+    <header>
+        <h1>Om Gupta</h1>
+        <h2>Web Developer & Designer</h2>
+        <p>Passionate about creating beautiful and functional web applications.</p>
+    </header>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <ul class="skills">
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Node.js</li>
+            <li>Responsive Design</li>
+            <li>UI/UX Design</li>
+            <li>Version Control (Git)</li>
+        </ul>
     </div>
+
+    <div class="section">
+        <h2>Experience</h2>
+        <ul class="experience">
+            <li><strong>Web Developer</strong> at XYZ Company (2021 - Present)</li>
+            <li><strong>Intern</strong> at ABC Corp (2020 - 2021)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        <ul class="education">
+            <li><strong>Bachelor of Science in Computer Science</strong> - University of Example (2017 - 2021)</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Contact: om.gupta@example.com | LinkedIn: linkedin.com/in/omgupta</p>
+    </footer>
 </body>
 </html>

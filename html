@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Name is Om</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #333;
+        }
+
+        .name-container {
+            background-color: #ffcc00;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .name-container:hover {
+            transform: scale(1.1);
+        }
+
+        .name-text {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .click-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .click-btn:hover {
+            background-color: #45a049;
+        }
+
+        .hidden-message {
+            font-size: 1.2em;
+            color: #008CBA;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="name-container">
+        <p class="name-text">My name is Om</p>
+        <button class="click-btn" onclick="showMessage()">Click to reveal secret</button>
+        <p id="hiddenMessage" class="hidden-message">Welcome to my website!</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            var message = document.getElementById("hiddenMessage");
+            message.style.display = "block";
+        }
+    </script>
+</body>
+</html>

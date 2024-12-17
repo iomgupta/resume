@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Gupta Om</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+        .language-selector {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        function changeLanguage(lang) {
+            const texts = {
+                en: {
+                    title: "About Me",
+                    name: "Gupta Om",
+                    intro: "Hello! I am Gupta Om, a passionate individual hailing from the vibrant state of Gujarat, India. My academic journey has been a fulfilling one, having completed my schooling under the esteemed Gujarat Board, where I laid the foundation for my future studies. I pursued my higher secondary education in the realm of commerce, which piqued my interest in the intricacies of business and technology. This interest led me to embark on a transformative path in the field of computer science, achieving my Bachelor's in Computer Applications (BCA) followed by a Master's in Computer Applications (MCA) with a specialization in Cloud Computing.",
+                    hobbies: "Beyond my academic pursuits, I am an avid traveler at heart. Exploring new cultures and landscapes fuels my curiosity and broadens my horizons. I find joy in the melodies of music, which accompany me on my adventures and serve as a backdrop to my daily life. Additionally, I have a penchant for board games, which not only stimulate my strategic thinking but also provide delightful moments with friends and family.",
+                    goals: "As I navigate through life, I am eager to embrace new challenges and opportunities, leveraging my skills in cloud computing and my love for technology. I believe in the power of continuous learning and personal growth, and I look forward to connecting with like-minded individuals who share my enthusiasm for innovation and exploration."
+                },
+                hi: {
+                    title: "मेरे बारे में",
+                    name: "गुप्ता ओम",
+                    intro: "नमस्ते! मैं गुप्ता ओम हूँ, जो गुजरात, भारत के जीवंत राज्य से आता हूँ। मेरी शैक्षणिक यात्रा एक संतोषजनक रही है, मैंने गुजरात बोर्ड के तहत अपनी स्कूली शिक्षा पूरी की, जहाँ मैंने अपने भविष्य के अध्ययन के लिए आधार रखा। मैंने वाणिज्य के क्षेत्र में उच्चतर माध्यमिक शिक्षा प्राप्त की, जिसके बाद मैंने कंप्यूटर विज्ञान में बैचलर और मास्टर डिग्री प्राप्त की, और आजकल मैं क्लाउड कंप्यूटिंग में विशेषज्ञता प्राप्त कर रहा हूँ।",
+                    hobbies: "शैक्षणिक क्षेत्रों के अलावा, मुझे यात्रा करना बहुत पसंद है। नई संस्कृतियों और स्थानों का अन्वेषण मुझे रोमांचित करता है। मुझे संगीत में रुचि है, जो मेरी यात्रा में साथी बनती है और मेरे जीवन के दैनिक पहलुओं में खुशी लाती है। इसके अलावा, मुझे बोर्ड गेम्स का शौक है, जो मुझे रणनीतिक सोच को बढ़ावा देने के साथ-साथ दोस्तों और परिवार के साथ अच्छे पल बिताने में मदद करता है।",
+                    goals: "जीवन की यात्रा के दौरान, मैं नई चुनौतियों और अवसरों को स्वीकार करने के लिए तत्पर हूँ, अपनी क्लाउड कंप्यूटिंग और प्रौद्योगिकी के प्रति प्रेम के साथ। मैं मानता हूँ कि निरंतर अध्ययन और व्यक्तिगत विकास की शक्ति होती है, और मुझे उन लोगों से जुड़ने का इंतजार है, जो नवाचार और अन्वेषण के प्रति समान उत्साही हैं।"
+                },
+                gu: {
+                    title: "મારા વિશે",
+                    name: "ગુપ્તા ઓમ",
+                    intro: "હેલો! હું ગુપ્તા ઓમ છું, જે ગુજરાત, ભારતના જિવંત રાજ્યથી આવ્યો છું. મારી શૈક્ષણિક યાત્રા સંપૂર્ણ રહી છે, મેં ગુજરાત બોર્ડ હેઠળ મારી શાળા પુરી કરી, જ્યાં મેં મારા ભવિષ્યના અભ્યાસ માટે મકાન તૈયાર કર્યુ. પછી મેં વાણિજ્યના ક્ષેત્રમાં ઉચ્ચતર માધ્યમિક શિક્ષણ લીધો, જે પછી મેં કમ્પ્યુટર વિજ્ઞાનમાં બેચલર અને માસ્ટર ડિગ્રી પૂર્ણ કરી છે, અને આજકાલ હું ક્લાઉડ કમ્પ્યુટિંગમાં વિશેષતા મેળવી રહ્યો છું.",
+                    hobbies: "અકાદેમિક ક્ષેત્રોની બહાર, હું પ્રવાસ કરવાને ખૂબ જ પસંદ કરું છું. નવી સંસ્કૃતિઓ અને સ્થળો તપાસવી મને રોમાંચિત કરે છે. મારે સંગીતમાં રસ છે, જે મારી મુસાફરીમાં સાથી બને છે અને મારા જીવનના દૈનિક પાસાઓમાં આનંદ લાવે છે. સાથે, હું બોર્ડ ગેમ્સનો શોખ રાખું છું, જે મને વ્યૂહાત્મક વિચારણામાં મદદ કરે છે અને મિત્રો અને પરિવાર સાથે મજા કરતી વખતે મઝાનું બને છે.",
+                    goals: "જીવનની મુસાફરી દરમિયાન, હું નવી પડકારો અને અવસરોને સ્વીકારવા માટે આતુર છું, મારા ક્લાઉડ કમ્પ્યુટિંગના કુશળતાને અને ટેકનોલોજી માટેના પ્રેમ સાથે. હું માનું છું કે સતત શિક્ષણ અને વ્યક્તિગત વૃદ્ધિની શક્તિ છે, અને હું એ લોકો સાથે જોડાવાની રાહ જોઉં છું જેમણે નવીનતા અને અન્વેષણ માટે આત્યંતિક ઉત્સાહ ધરાવવી છે."
+                }
+            };
+
+            // Update page content based on selected language
+            document.getElementById('title').textContent = texts[lang].title;
+            document.getElementById('name').textContent = texts[lang].name;
+            document.getElementById('intro').textContent = texts[lang].intro;
+            document.getElementById('hobbies').textContent = texts[lang].hobbies;
+            document.getElementById('goals').textContent = texts[lang].goals;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="title">About Me</h1>
+        <div class="language-selector">
+            <label for="languages">Choose Language:</label>
+            <select id="languages" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="gu">Gujarati</option>
+            </select>
+        </div>
+    </header>
+
+    <section>
+        <h2 id="name">Gupta Om</h2>
+        <p id="intro">
+            Hello! I am Gupta Om, a passionate individual hailing from the vibrant state of Gujarat, India. My academic journey has been a fulfilling one, having completed my schooling under the esteemed Gujarat Board, where I laid the foundation for my future studies. I pursued my higher secondary education in the realm of commerce, which piqued my interest in the intricacies of business and technology. This interest led me to embark on a transformative path in the field of computer science, achieving my Bachelor's in Computer Applications (BCA) followed by a Master's in Computer Applications (MCA) with a specialization in Cloud Computing.
+        </p>
+        <h3>Hobbies</h3>
+        <p id="hobbies">
+            Beyond my academic pursuits, I am an avid traveler at heart. Exploring new cultures and landscapes fuels my curiosity and broadens my horizons. I find joy in the melodies of music, which accompany me on my adventures and serve as a backdrop to my daily life. Additionally, I have a penchant for board games, which not only stimulate my strategic thinking but also provide delightful moments with friends and family.
+        </p>
+        <h3>Goals</h3>
+        <p id="goals">
+            As I navigate through life, I am eager to embrace new challenges and opportunities, leveraging my skills in cloud computing and my love for technology. I believe in the power of continuous learning and personal growth, and I look forward to connecting with like-minded individuals who share my enthusiasm for innovation and exploration.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gupta Om. All rights reserved.</p>
+    </footer>
+</body>
+</html>
